@@ -1,0 +1,19 @@
+[package]
+name = "nrf-ble-driver-sys"
+version = "0.1.0"
+authors = ["Matt Allen matt@graynode.net"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+
+[build-dependencies]
+vcpkg = "0.2"
+cmake = "0.1"
+
+
+[features]
+default = ["sd-api-v6"]
+sd-api-v6 = []

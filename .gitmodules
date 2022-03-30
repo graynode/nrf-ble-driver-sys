@@ -1,0 +1,3 @@
+[submodule "src/pc-ble-driver"]
+	path = src/pc-ble-driver
+	url = https://github.com/NordicSemiconductor/pc-ble-driver.git
