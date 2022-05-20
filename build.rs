@@ -15,7 +15,7 @@ const NRF_BLE_DRIVER_LIB_NAME: &str = "nrf-ble-driver-sd_api_v6-mt-static-gd-4_1
 
 
 fn find_dependencies() -> bool {
-    env::var("VCPKG_ROOT").unwrap();
+    env::var("VCPKG_ROOT").expect("Error: VCPKG_ROOT is not defined.");
 
     let mut config = vcpkg::Config::new();
     if config.find_package("asio").is_err() {
@@ -44,7 +44,7 @@ fn build_sources() -> bool {
     let lib_folder = dest.join("lib");
     println!("cargo:warning=dst: {}", dest.display());
     println!("cargo:rustc-link-search=native={}", lib_folder.display());
-    println!("cargo:rustc-link-lib=static={}", NRF_BLE_DRIVER_LIB_NAME);
+    println!("cargo:rustc-link-lib={}", NRF_BLE_DRIVER_LIB_NAME);
     return true;
 
 }

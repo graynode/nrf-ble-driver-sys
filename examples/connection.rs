@@ -37,5 +37,5 @@ fn create_adapter(port_name: &str) -> *mut ffi::adapter_t {
 }
 
 fn main() {
-    let adapter = create_adapter("/dev/ttyACM0");
+    let _adapter = create_adapter("/dev/ttyACM0");
 }

@@ -2,7 +2,17 @@
 name = "nrf-ble-driver-sys"
 version = "0.1.0"
 authors = ["Matt Allen matt@graynode.net"]
+description = "A common library for linking libnrf-ble-driver-sd_api from Nordic"
+keywords = ["nrf", "pc-ble-driver", "nrf52", "nordic"]
+categories = [
+    "external-ffi-bindings",
+    "embedded"
+]
 edition = "2021"
+repository = "https://github.com/graynode/nrf-ble-driver-sys"
+documentation = ""
+readme = "README.md"
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
