@@ -649,6 +649,7 @@ pub const NRF_ERROR_SD_RPC_SERIAL_PORT_INTERNAL_ERROR: u32 = 32832;
 #[derive(Debug, Copy, Clone)]
 pub struct adapter_t {
     pub internal: *mut ::std::os::raw::c_void,
+    pub user_data: *mut ::std::os::raw::c_void,
 }
 #[test]
 fn bindgen_test_layout_adapter_t() {
@@ -10847,6 +10848,7 @@ extern "C" {
         status_handler: sd_rpc_status_handler_t,
         event_handler: sd_rpc_evt_handler_t,
         log_handler: sd_rpc_log_handler_t,
+        user_data: *mut ::std::os::raw::c_void,
     ) -> u32;
 }
 extern "C" {
